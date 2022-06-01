@@ -1,0 +1,41 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Principle Components</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m42015</md:content-id>
+  <md:title>Principle Components</md:title>
+  <md:abstract>Helps the user understand the various components in NFC and their mathematical significance.  Very useful for discussions presented in the next module.</md:abstract>
+  <md:uuid>fce97ac0-2f02-4e76-b231-11d4f210171e</md:uuid>
+</metadata>
+
+<content>
+    <section id="id1170129751424">
+      <title>About the components </title>
+      <para id="id1170134946025">An NFC system consists of a passive network (the card/circuit with information) and an active circuit. We must also take into account the environment surrounding the device. A working knowledge of these three componenents is essential to understanding the inner mechanics of near field communication.</para>
+      <section id="id1170131149063">
+        <title>The Active Circuit</title>
+        <para id="id1170132601807">The active circuit has a transmitting antenna that broadcasts RF waves and a number of electrodes that read values corresponding to how the environment reacts to the RF waves. All the processing power is centered in this active circuit and that is where the decoding will take place. This would be considered the reader in the traditional sense. In the following mathematical discussion, the electrode voltages of the active circuit will be values in a vector <emphasis effect="bold">v1.</emphasis><emphasis effect="italics"/></para>
+        <figure id="id1170133319733">
+          <media id="id1170133319733_media" alt="">
+            <image mime-type="image/png" src="../../media/Object 1.png" id="id1170133319733__onlineimage" height="333" width="296"/>
+          </media>
+        </figure>
+      </section>
+      <section id="id1170162588230">
+        <title>The Passive Network</title>
+        <para id="id1170150574277">The passive network consists of a series of electrodes which are attached to impedances with values of infinity or zero (open/closed switches). This network might be located inside a phone or other device and is associated with the client side identification. The configuration of the passive network uniquely identifies the user, and thus, our problem becomes one of reverse engineering in which we try to determine the impedances. In our analysis, the passive network voltages are stored in the vector <emphasis effect="bold">v1 </emphasis>and the impedances are represented by the matrix <emphasis effect="bold">Y1. </emphasis>Since we are assuming no mutual impedances, this is a diagonal matrix. Rather than using infinity, we have represented the open switches with the very high impedance value of 10,000 ohms. </para>
+      </section>
+      <section id="id1170136927573">
+        <title>The Environment</title>
+        <para id="id1170139618436">The “evil channel” is our environment. It converts our beautiful binary impedances into ugly complex voltages. It is our job to understand its effects and make sure that our output is decipherable. The channel matrix we used was given to us and was measured experimentally. It can be modeled by a large square matrix which is of size N x N where N is the total number of voltages (in this case 41). The matrix is labeled <emphasis effect="bold">Ys </emphasis>and is divided into 9 separate matrices, each representing the mutual interaction of different elements in our matrix. </para>
+        <figure id="id1170146439722">
+          <media id="id1170146439722_media" alt="">
+            <image mime-type="image/png" src="../../media/graphics1.png" id="id1170146439722__onlineimage" height="517" width="599"/>
+          </media>
+        </figure>
+        <para id="id1170134398148">For example, the elements in matrix W12 would reperesent how the electrodes with voltages <emphasis effect="bold">v1 </emphasis>interact with the electrodes with voltages <emphasis effect="bold">v2. </emphasis>Consequently, our answer lies in simplifying this matrix and trying to nullify it’s effect on the input (the <emphasis effect="bold">Y1 </emphasis>matrix). </para>
+      </section>
+    </section><section id="eip-657"><title>Problem Analysis</title><para id="eip-387">
+As previously stated, the relationship between input impedences and output voltages is non-linear by nature.  Thus, our task will be to find some underlying patterns between input and output so that we may adequately decode the voltage values.  When presented with a problem as open-ended as this, a number of techniques can be employed.  We must make a preliminary analysis of the data through the use of well-constructed plots and principle component analysis.  
+</para></section>
+  </content>
+</document>

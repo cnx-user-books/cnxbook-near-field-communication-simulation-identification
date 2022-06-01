@@ -1,0 +1,16 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m42010</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:abstract/>
+  <md:uuid>fe83a6bc-bb32-4ea2-8e28-8b1239a6d4c7</md:uuid>
+</metadata>
+
+<content>
+  <para id="delete_me"><!-- Insert module text here -->
+     Near field communication (NFC) is a new technology that allows for wireless, contactless communication between devices.  It works by utilizing magnetic coupling between devices.  There can either be one active device and one passive device or two active devices.</para><para id="eip-102">NFC technology is currently being put into cell phones.  There is excellent commercial potential for the technology.  For example, it can allow for people to simply tap their phones to pay for their purchases instead of pulling out a card.  Also, one could tap their phone to an NFC enabled poster to obtain further information about the advertisement or to purchase the advertised item.  Another example of possible NFC use is the ability to sit down at a restaurant, tap your phone on the table, pull up the menu, and order from your phone.</para><para id="eip-679">One of the primary concerns with all of these examples is that it is crucial that the device that is in contact with the phone is able to accurately identify the phone.  Even if the active device correctly identifies the phone 99% of the time, this would be unacceptable because that 1% of error represents instances in which some random unlucky individual is charged for something that someone else bought.</para><para id="eip-922">Our goal was to accurately model an NFC system and then develop an algorithm that accurately identifies a passive device.</para>
+</content>
+
+</document>

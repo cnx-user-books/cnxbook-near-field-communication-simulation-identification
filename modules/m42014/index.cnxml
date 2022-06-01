@@ -1,0 +1,16 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Conclusion</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m42014</md:content-id>
+  <md:title>Conclusion</md:title>
+  <md:abstract/>
+  <md:uuid>000c6415-0a34-4363-91cf-57c994606ecd</md:uuid>
+</metadata>
+
+<content>
+  <para id="delete_me"><!-- Insert module text here -->
+  We were able to successfully model an NFC system.  It gave us accurate outputs for whatever input we chose to give it.  However, due to the nonlinearity of the system, we were unable to find an algorithm that sufficiently accurately could identify a passive device by looking at the voltages produced at the output.</para><para id="eip-115">We did determine that there was a way to accurately identify a device given the limitation of our system.  We chose not to implement this method because it does not scale well and it would require that any active device receive the same signal from one passive device regardless of the environment that the devices are in.  This method would require the active device to have all possible received signals store in their memories so that for every unique device, it would recognize the unique signal it produces.</para><para id="eip-939">Instead of implementing this method, we tried to identify patterns in the output signals.  The patterns that we were looking for, however, simply weren’t there.  With more time, there is a possibility that we might find a useful pattern if we were to make our input impedances continuous instead of the 0’s and infinities that we were experimenting with.</para><para id="eip-429">While our lack of a concrete algorithm is disappointing, the robustness of our model is promising.  It is possible that with further analysis, we might find the type of pattern that we are looking for to help us create a working algorithm.</para>
+</content>
+
+</document>

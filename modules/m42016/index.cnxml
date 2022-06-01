@@ -1,0 +1,101 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Results</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m42016</md:content-id>
+  <md:title>Results</md:title>
+  <md:abstract/>
+  <md:uuid>f86651a5-e6de-4073-8e71-099ee64f4118</md:uuid>
+</metadata>
+
+<content>
+    <section id="id1170679067544">
+      <title>Direct Relationship</title>
+      <para id="id1170687612535">Our first step was to generate a Y1 with random ones and zeros and see if there is any direct relationship to v1. The following demonstrates the code used to produce random binary values (impedances for Y1), while Fig 1 shows the output of the comparison. </para>
+      <code id="eip-453" display="block">for c = 1:m,
+    if rand &gt; 0.5,
+        y1(c) = one;
+    else
+        y1(c) = 0;
+    end
+end
+
+Y1 = diag(y1);
+v1 = nfc(Y1, S0);
+
+subplot(2,1,1)
+stem(1:20, y1, 'r')
+title('Magnitude of Y1')
+
+subplot(2,1,2)
+stem(1:20, abs(v1), 'b')
+title('Magnitude of v1')
+</code><para id="eip-484"><figure id="direct"><media id="d" alt="Y1 and the corresponding v1">
+    <image mime-type="image/jpeg" src="../../media/direct.jpg"/>
+  </media>
+  
+<caption>The diagonal of Y1 and the corresponding v1 values.
+  </caption></figure></para><para id="id1170680245258">From these graphs, there was no obvious correlation between the “0’s” and “1’s” in Y1 and the values of v1. From here, a linear relationship was tested. </para>
+    </section>
+    <section id="id1170688401598">
+      <title>Testing for Linearity</title>
+      <para id="id1170689641661">To determine if there was a linearity in computing the values of v1, we decided to compute the values of v1 for a Y1 matrix that had a diagonal of 11000000000000000000. As such, we first computed a set of v1 where there was a single 1 in the first port of Y1, and then a second set of v1 where there was a single 1 in the second port of Y1, and then added those two sets of values together.  We were hoping to see if the result would produce a set of values of v1 that is identical to or similar to that which would be produced by a matrix with a diagonal of two 1's followed by 0's. The results of this test are shown in Fig 2 and Fig 3. </para>
+      <para id="eip-355"><figure id="nonlinear1"><media id="nl1" alt="The separate v1 values.">
+    <image mime-type="image/jpeg" src="../../media/nl1.jpg"/>
+  </media>
+  
+<caption>The separate v1 values.
+  </caption></figure></para><para id="eip-837"><figure id="nonlinear2"><media id="nl2" alt="Comparison for linearity">
+    <image mime-type="image/jpeg" src="../../media/nl2.jpg"/>
+  </media>
+  
+<caption>Comparison for linearity.
+  </caption></figure></para><para id="id1170681937196">Looking at Fig 3. shows that the methods produce similar looking graphs, but each port has a slightly different magnitude. From these results we were able to conclude that the relationship between Y1 and v1 was non-linear. </para>
+    </section>
+    <section id="id1170681106036">
+      <title>Fourier Transform</title>
+      <para id="id1170679984832">Our next approach was to look at the Fourier transform of several different patterns, to see if a Fourier transform of the values of v1 could provide any insight into a relationship. The following set of graphs shows the values of the diagonal of the Y1 matrix, and the corresponding v1 values computed from it. </para>
+      
+      <para id="eip-629"><figure id="fourierpattern1"><media id="fp1" alt="Pattern 1">
+    <image mime-type="image/jpeg" src="../../media/fp1.jpg"/>
+  </media>
+  
+<caption>Pattern 1 and the Fourier transform of the corresponding v1 values.
+  </caption></figure>
+
+<figure id="fourierpattern2"><media id="fp2" alt="Pattern 2">
+    <image mime-type="image/jpeg" src="../../media/fp2.jpg"/>
+  </media>
+  
+<caption>Pattern 2 and the Fourier transform of the corresponding v1 values.
+  </caption></figure>
+
+<figure id="fourierpattern3"><media id="fp3" alt="Pattern 3">
+    <image mime-type="image/jpeg" src="../../media/fp3.jpg"/>
+  </media>
+  
+<caption>Pattern 3 and the Fourier transform of the corresponding v1 values.
+  </caption></figure>
+
+<figure id="fourierpattern4"><media id="fp4" alt="Pattern 4">
+    <image mime-type="image/jpeg" src="../../media/fp4.jpg"/>
+  </media>
+  
+<caption>Pattern 4 and the Fourier transform of the corresponding v1 values.
+  </caption></figure>
+
+<figure id="fourierpattern5"><media id="fp5" alt="Pattern 5">
+    <image mime-type="image/jpeg" src="../../media/fp5.jpg"/>
+  </media>
+  
+<caption>Pattern 5 and the Fourier transform of the corresponding v1 values.
+  </caption></figure>
+
+<figure id="fourierpattern6"><media id="fp6" alt="Pattern 6">
+    <image mime-type="image/jpeg" src="../../media/fp6.jpg"/>
+  </media>
+  
+<caption>Pattern 6 and the Fourier transform of the corresponding v1 values.
+  </caption></figure></para><para id="id1170689600136">From these graphs, once again, there is no evidence that there is any relationship between any of the patterns and the values of v1, nor any relationship between Y1 and the Fourier transform of the values in v1.</para>
+    </section>
+  </content>
+</document>

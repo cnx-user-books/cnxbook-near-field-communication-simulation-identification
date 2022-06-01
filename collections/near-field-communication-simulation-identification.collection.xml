@@ -1,0 +1,49 @@
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" type="Techreport">
+  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
+  <md:content-id>col11398</md:content-id>
+  <md:title>Near Field Communication Simulation &amp; Identification</md:title>
+  
+  
+  <md:license url="http://creativecommons.org/licenses/by/3.0/"/>
+  <md:language>en</md:language>
+
+  
+
+  
+  
+  
+  
+  
+
+  <md:uuid>cd2c28fe-6d54-4420-a1c2-5b45c0a05c8c</md:uuid>
+<md:slug>near-field-communication-simulation-identification</md:slug>
+</metadata>
+
+  <col:content>
+    
+      <col:module document="m42010"/>
+        
+      
+    
+    
+      <col:module document="m42015"/>
+        
+      
+    
+    
+      <col:module document="m42017"/>
+        
+      
+    
+    
+      <col:module document="m42016"/>
+        
+      
+    
+    
+      <col:module document="m42014"/>
+        
+      
+    
+  </col:content>
+</col:collection>
